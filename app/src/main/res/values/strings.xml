@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">ProjetoMiniMerc</string>
+    <string name="title_activity_form_login">FormLogin</string>
+    <string name="entrar">Entrar</string>
+    <string name="text_cadastro">Crie uma conta clicando aqui</string>
+</resources>
