@@ -5,4 +5,5 @@
     <color name="DeepSkyBlue">#00BFFF</color>
     <color name="LightSkyBlue">#87CEFA</color>
     <color name="SkyBlue">#87CEEB</color>
+    <color name="DarkerGray">#AAAAAA</color>
 </resources>
