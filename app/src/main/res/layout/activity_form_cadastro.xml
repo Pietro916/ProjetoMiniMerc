@@ -37,6 +37,7 @@
         app:layout_constraintTop_toTopOf="@id/containerComponents"
         app:layout_constraintStart_toStartOf="@id/containerComponents"
         app:layout_constraintEnd_toEndOf="@id/containerComponents"
+        android:textSize="18dp"
         />
 
     <EditText
@@ -60,12 +61,25 @@
         />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnCadastrar"
         style="@style/Button"
         android:layout_margin="30dp"
-        android:text="Cadastrar"
-        app:layout_constraintTop_toBottomOf="@id/containerComponents"
-        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/text_cadastrar"
         app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/containerComponents" />
+
+    <TextView
+        android:id="@+id/textViewStatus"
+        android:layout_width="334dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/text_status"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCadastrar"
+        tools:text="primeiro status" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
