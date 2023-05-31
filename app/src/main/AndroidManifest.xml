@@ -13,9 +13,6 @@
         android:theme="@style/Theme.Mercado"
         tools:targetApi="31">
         <activity
-            android:name=".produtos_add"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
