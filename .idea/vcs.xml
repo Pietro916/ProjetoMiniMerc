@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="VcsDirectoryMappings">
-    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Projects/AcademicoLogin" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Projects/Prancheta" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/TCC/ProjetoMiniMercMob" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/TCC/gestao-minimercado" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/TCC/gestao-minimercadoOld" vcs="Git" />
   </component>
 </project>
