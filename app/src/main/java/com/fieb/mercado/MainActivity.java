@@ -20,9 +20,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void setBtnAddProdPg(View v){
-        Intent intent = new Intent(MainActivity.this, produtos_add.class);
-        startActivity(intent);
-        finish();
+            Intent intent = new Intent(MainActivity.this, produtos_add.class);
+            startActivity(intent);
     }
 
 }

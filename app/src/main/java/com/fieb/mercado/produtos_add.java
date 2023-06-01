@@ -6,11 +6,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class produtos_add extends AppCompatActivity {
 
     EditText nomeV,descricaoV,quantidadeV,precoV,imageV;
-    Button addProd = findViewById(R.id.btnAddProd);
+    Button addProd;
+    TextView erroV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +24,8 @@ public class produtos_add extends AppCompatActivity {
         quantidadeV = findViewById(R.id.quantidade);
         precoV = findViewById(R.id.preco);
         imageV = findViewById(R.id.image);
+        addProd = findViewById(R.id.btnAddProd);
+        erroV = findViewById(R.id.erro);
     }
 
     public void addProd (View v){
@@ -33,4 +37,6 @@ public class produtos_add extends AppCompatActivity {
 
         DatabaseManager.insertData(descricao,preco,quantidade,nome,image);
     }
+
+
 }
