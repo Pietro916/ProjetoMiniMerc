@@ -9,7 +9,7 @@ import java.util.concurrent.Executors;
 
 public class DatabaseManager {
 
-    private static final String DB_URL = "jdbc:mysql://MiniMerc.mssql.somee.com/MiniMerc";
+    private static final String DB_URL = "jdbc:sqlserver://MiniMerc.mssql.somee.com";
     private static final String DB_USERNAME = "Nicolas_2701_SQLLogin_1";
     private static final String DB_PASSWORD = "m2rv8z283k";
 
