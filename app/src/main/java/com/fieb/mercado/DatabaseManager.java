@@ -9,7 +9,7 @@ import java.util.concurrent.Executors;
 
 public class DatabaseManager {
 
-    private static final String DB_URL = "jdbc:sqlserver://MiniMerc.mssql.somee.com";
+    private static final String DB_URL = "jdbc:jtds:sqlserver://MiniMerc.mssql.somee.com";
     private static final String DB_USERNAME = "Nicolas_2701_SQLLogin_1";
     private static final String DB_PASSWORD = "m2rv8z283k";
 
@@ -19,8 +19,7 @@ public class DatabaseManager {
         executor.execute(() -> {
             try {
                 Connection conn = DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASSWORD);
-
-                String query = "INSERT INTO usuarios (descricao, nome, preco, quantidade, image) VALUES (?, ?, ?, ?, ?)";
+                String query = "INSERT INTO produto (descricao, nome, preco, quantidade, image) VALUES (?, ?, ?, ?, ?)";
                 PreparedStatement statement = conn.prepareStatement(query);
                 statement.setString(1, descricao);
                 statement.setString(2, nome);
