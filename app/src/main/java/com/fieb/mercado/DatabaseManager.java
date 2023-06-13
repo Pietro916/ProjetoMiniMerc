@@ -86,4 +86,23 @@ public class DatabaseManager {
             }
         });
     }
+    public static void insertCadastro(String email,String senha,int cnpj,int cpf) {
+        executor.execute(() -> {
+            try {
+                Connection conn = DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASSWORD);
+                String query = "INSERT INTO admnistrador (email, senha, cnpj, cpf) VALUES (?, ?, ?, ?)";
+                PreparedStatement statement = conn.prepareStatement(query);
+                statement.setString(1, email);
+                statement.setString(2, senha);
+                statement.setDouble(3, cnpj);
+                statement.setInt(4, cpf);
+                statement.executeUpdate();
+
+                statement.close();
+                conn.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        });
+    }
 }

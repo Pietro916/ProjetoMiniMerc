@@ -2,6 +2,7 @@ package com.fieb.mercado;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -36,6 +37,12 @@ public class produtos_add extends AppCompatActivity {
         int quantidade = Integer.parseInt(quantidadeV.getText().toString());
 
         DatabaseManager.insertData(descricao,preco,quantidade,nome,image);
+        voltar();
+    }
+
+    public void voltar(){
+        Intent intent = new Intent(produtos_add.this, MainActivity.class);
+        startActivity(intent);
     }
 
 
