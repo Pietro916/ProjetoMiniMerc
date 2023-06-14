@@ -37,9 +37,4 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void setBtnLoginPg(View v){
-        Intent intent = new Intent(MainActivity.this, Login.class);
-        startActivity(intent);
-    }
-
 }

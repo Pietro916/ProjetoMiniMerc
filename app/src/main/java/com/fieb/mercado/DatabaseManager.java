@@ -105,25 +105,4 @@ public class DatabaseManager {
             }
         });
     }
-    public static boolean login(String email,String senha) {
-            try {
-                Connection conn = DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASSWORD);
-                String query = "SELECT * FROM admnistrador WHERE email = ? AND senha = ?";
-                PreparedStatement statement = conn.prepareStatement(query);
-                statement.setString(1, email);
-                statement.setString(2, senha);
-                ResultSet resultSet = statement.executeQuery();
-
-                boolean loginSucesso = resultSet.next();
-
-                resultSet.close();
-                statement.close();
-                conn.close();
-
-                return loginSucesso;
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        return false;
-    }
 }
