@@ -1,6 +1,5 @@
 package com.fieb.mercado;
 
-import android.database.Cursor;
 import android.os.Handler;
 import android.os.Looper;
 import android.widget.ArrayAdapter;
@@ -13,8 +12,15 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 public class DatabaseManager {
 
@@ -106,24 +112,38 @@ public class DatabaseManager {
         });
     }
     public static boolean login(String email,String senha) {
-            try {
-                Connection conn = DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASSWORD);
-                String query = "SELECT * FROM admnistrador WHERE email = ? AND senha = ?";
-                PreparedStatement statement = conn.prepareStatement(query);
-                statement.setString(1, email);
-                statement.setString(2, senha);
-                ResultSet resultSet = statement.executeQuery();
+        ExecutorService executorS = Executors.newSingleThreadExecutor();
 
-                boolean loginSucesso = resultSet.next();
+            Future<Boolean> future = executorS.submit(new Callable<Boolean>() {
+                public Boolean call() {
+                    try {
+                        Connection conn = DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASSWORD);
+                        String query = "SELECT * FROM admnistrador WHERE email = ? AND senha = ?";
+                        PreparedStatement statement = conn.prepareStatement(query);
+                        statement.setString(1, email);
+                        statement.setString(2, senha);
+                        ResultSet resultSet = statement.executeQuery();
+                        boolean loginSucesso = resultSet.next();
+                        resultSet.close();
+                        statement.close();
+                        conn.close();
+                        return loginSucesso;
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                        return false;
+                    }
+                }
+            });
+            boolean loginSucesso;
+        try{
+            loginSucesso = future.get(5, TimeUnit.SECONDS);
+        }catch (InterruptedException | ExecutionException | TimeoutException e){
+            e.printStackTrace();
+            loginSucesso = false;
+        } finally {
+            executorS.shutdown();
+        }
 
-                resultSet.close();
-                statement.close();
-                conn.close();
-
-                return loginSucesso;
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        return false;
+        return loginSucesso;
     }
 }
