@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Mercado</string>
+    <string name="tvContent">Nosso objetivo é promover visibilidade e facilidade aos nossos usuários, fornecendo ferramentas e recursos para ajudar você a alcançar seus objetivos de negócio.</string>
+    <string name="tvMissionContent"></string>
 </resources>

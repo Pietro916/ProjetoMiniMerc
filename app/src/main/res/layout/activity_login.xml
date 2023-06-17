@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".Login">
 
     <TextView
@@ -15,7 +16,8 @@
         android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/TextView"/>
 
     <EditText
         android:id="@+id/emailL"
@@ -26,7 +28,9 @@
         android:hint="email"
         android:inputType="text"
         android:minHeight="48dp"
-        android:text=""
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textColorLink="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
@@ -38,9 +42,12 @@
         android:layout_marginTop="24dp"
         android:ems="10"
         android:hint="senha"
-        android:inputType="text"
+        android:inputType="textPassword"
         android:minHeight="48dp"
         android:text=""
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textColorLink="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailL" />
