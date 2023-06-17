@@ -2,19 +2,19 @@ pluginManagement {
     repositories {
         //curso
 
-        maven{
-            url 'http://repoandroid:8081/repository/maven-public/'
-            allowInsecureProtocol=true
-            credentials{
-                username 'android'
-                password '123456'
-            }
-        }
+        //maven{
+           // url 'http://repoandroid:8081/repository/maven-public/'
+           // allowInsecureProtocol=true
+           // credentials{
+            //    username 'android'
+             //   password '123456'
+            //}
+        //}
 
         //casa
-        //google()
-        //mavenCentral()
-        //gradlePluginPortal()
+        google()
+        mavenCentral()
+        gradlePluginPortal()
     }
 }
 dependencyResolutionManagement {
@@ -22,19 +22,19 @@ dependencyResolutionManagement {
     repositories {
         //curso
 
-        maven{
-            url 'http://repoandroid:8081/repository/maven-public/'
-            allowInsecureProtocol=true
-            credentials{
-                username 'android'
-                password '123456'
-            }
-        }
+        //maven{
+            //url 'http://repoandroid:8081/repository/maven-public/'
+            //allowInsecureProtocol=true
+            //credentials{
+                //username 'android'
+                //password '123456'
+            //}
+        //}
 
 
         //casa
-        //google()
-        //mavenCentral()
+        google()
+        mavenCentral()
     }
 }
 rootProject.name = "Mercado"

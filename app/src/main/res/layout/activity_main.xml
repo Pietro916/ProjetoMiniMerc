@@ -8,13 +8,17 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:text="Mini_Mercado"
+        android:textAlignment="center"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.15" />
 
     <Button
         android:id="@+id/btnAddProdPg"
@@ -25,40 +29,31 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.714" />
+        app:layout_constraintTop_toTopOf="@id/textView"
+        app:layout_constraintVertical_bias="0.338" />
 
     <Button
         android:id="@+id/btnListProdPg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="56dp"
         android:onClick="setBtnListProdPg"
         android:text="ListProdutos"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnAddProdPg" />
 
-    <Button
-        android:id="@+id/btnRegisterPg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:onClick="setBtnRegisterPg"
-        android:text="Register"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnListProdPg" />
 
-    <Button
-        android:id="@+id/BtnLoginPg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:onClick="setBtnLoginPg"
-        android:text="Login"
-        app:layout_constraintBottom_toTopOf="@+id/btnAddProdPg"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+    <!-- <Button
+         android:id="@+id/BtnLoginPg"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginBottom="24dp"
+         android:onClick="setBtnLoginPg"
+         android:text="Login"
+         app:layout_constraintBottom_toTopOf="@+id/btnAddProdPg"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent" /> -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

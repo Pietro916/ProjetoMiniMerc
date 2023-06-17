@@ -29,7 +29,12 @@ public class Login extends AppCompatActivity {
     }
 
     public void ir(){
-        Intent intent = new Intent(Login.this, Menu.class);
+        Intent intent = new Intent(Login.this, MainActivity.class);
+        startActivity(intent);
+    }
+
+    public void setBtnRegisterPg(View v){
+        Intent intent = new Intent(Login.this, Register.class);
         startActivity(intent);
     }
 }

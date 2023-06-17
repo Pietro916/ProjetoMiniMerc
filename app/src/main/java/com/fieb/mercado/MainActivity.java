@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnAddProdPg = findViewById(R.id.btnAddProdPg);
         btnListProdPg = findViewById(R.id.btnListProdPg);
-        btnRegisterPg = findViewById(R.id.btnRegisterPg);
+        //btnRegisterPg = findViewById(R.id.btnRegisterPg);
     }
 
     public void setBtnAddProdPg(View v){
@@ -32,14 +32,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void setBtnRegisterPg(View v){
-        Intent intent = new Intent(MainActivity.this, Register.class);
-        startActivity(intent);
-    }
-
-    public void setBtnLoginPg(View v){
-        Intent intent = new Intent(MainActivity.this, Login.class);
-        startActivity(intent);
-    }
+    //public void setBtnLoginPg(View v){
+        //Intent intent = new Intent(MainActivity.this, Login.class);
+       // startActivity(intent);
+    //}
 
 }
